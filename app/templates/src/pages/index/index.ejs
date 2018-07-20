@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= require('../../template/head.ejs')({title: 'Index'}) %>
+
+  <body>
+    <div id="app">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </div>
+    <%= require('../../template/footer.ejs')() %>
+  </body>
+
+</html>

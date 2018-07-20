@@ -1,0 +1,47 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx webpack-dev-server --config webpack.dev.config.js --mode development --open",
+    "predev": "rm -rf dist",
+    "prebuild": "rm -rf dist",
+    "dev": "npx cross-env NODE_ENV=development webpack --config ./webpack.dev.config.js --progress --mode development",
+    "build": "npx cross-env NODE_ENV=production webpack --config ./webpack.pro.config.js --progress --mode production",
+    "mock": "npx json-server --watch mock/db.json --routes mock/routes.json --port 9090",
+    "lint": "npx eslint --ext .js src",
+    "precp": "npm run build",
+    "cp": "cp -r dist/. ../test/dist"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": {
+    "name": "<%= author %>",
+    "email": "<%= email %>"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyprepare/growth-vue.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "basewebpack": "^1.0.6",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "json-server": "^0.12.2",
+    "pre-commit": "^1.2.2",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-lazyload": "^1.2.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "zepto": "^1.2.0"
+  }
+}
