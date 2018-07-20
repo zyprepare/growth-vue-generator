@@ -10,5 +10,5 @@
 ## 使用步骤：
   ### 在项目根目录下执行命令：
   1、npm i -g yo<br>
-  2、npm i -g generator-light<br>
-  3、yo light
+  2、npm i -g generator-lightvue<br>
+  3、yo lightvue
